@@ -22,10 +22,6 @@ def login(request):
     return render(request, 'login.html', context={})
 
 
-def register(request):
-    return render(request, 'register.html', context={})
-
-
 class CarListView(ListView):
     model = Cars
     template_name = 'cars/cars_list.html'
