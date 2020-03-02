@@ -30,8 +30,13 @@
     </li>
   </ul>
      <form class="form-inline my-2 my-lg-0 ml-40">
+         {% if user.is_authenticated %}
+          Welcome {{ user.username }}
+         <a class="btn btn-outline-primary my-2 my-sm-0" href="/logout"type="submit">Logout</a>
+         {% else %}
       <a class="btn btn-outline-primary my-2 my-sm-0" href="/login"type="submit">Login</a>
          <a class="btn btn-outline-primary my-2 my-sm-0 mr-sm-2 ml-2" href="/register" type="submit">Register</a>
+         {% endif %}
     </form>
 </nav>
 

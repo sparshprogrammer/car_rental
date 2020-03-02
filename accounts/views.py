@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -6,6 +6,11 @@ from django.views.generic import CreateView, DetailView, ListView
 
 # Create your views here.
 from accounts.forms import SignUpForm
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('/')
 
 
 def user_login(request):
