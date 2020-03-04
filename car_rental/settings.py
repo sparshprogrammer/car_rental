@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'cars',
+    'simple_email_confirmation',
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+
+#SIMPLE_EMAIL_CONFIRMATION_EMAIL_ADDRESS_MODEL = 'User.email'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'srivastava.sparsh@gmail.com'
+EMAIL_HOST_PASSWORD = 'NCPSparsh@07111994'
+EMAIL_PORT = 587
